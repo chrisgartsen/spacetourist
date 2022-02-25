@@ -266,3 +266,72 @@ select {
   transform: scale(1.5);
   opacity: 1;
 }
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  cursor: pointer;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > li:hover,
+.underline-indicators > li:focus,
+.underline-indicators > button:hover,
+.underline-indicators > button:focus {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected='true'] {
+  color: hsl(var(--clr-white) / 1);
+  border-color: hsl(var(--clr-white) / 1);
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  background-color: hsl(var(--clr-white) / 0.25);
+}
+
+.dot-indicators > button:hover,
+.dot-indicators > button:focus {
+  background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > [aria-selected='true'] {
+  background-color: hsl(var(--clr-white) / 1);
+}
+
+.number-indicators {
+  flex-direction: column;
+}
+
+.number-indicators > button {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  border: 0;
+}
